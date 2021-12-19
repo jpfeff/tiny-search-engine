@@ -1,0 +1,114 @@
+==22610== Memcheck, a memory error detector
+==22610== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22610== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==22610== Command: ./querier /thayerfs/home/d29265d/shared/tse-output/crawler/crawler.data/data2/ /thayerfs/home/d29265d/shared/tse-output/indexer/indexer.data/index.2
+==22610== 
+Query: dartmouth and college 
+Matches 3 documents (ranked):
+score	242	doc	5:	http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Dartmouth_College.html
+score	1	doc	2:	http://cs50tse.cs.dartmouth.edu/tse/wikipedia/
+score	1	doc	8:	http://cs50tse.cs.dartmouth.edu/tse/wikipedia/Computer_science.html
+-----------------------------------------------
+Query: dog or banana 
+Matches 1 documents (ranked):
+score	1	doc	47:	http://cs50tse.cs.dartmouth.edu/tse/toscrape/catalogue/category/books/business_35/index.html
+-----------------------------------------------
+Query: tse 
+Matches 2 documents (ranked):
+score	2	doc	1:	http://cs50tse.cs.dartmouth.edu/tse/
+score	1	doc	83:	http://cs50tse.cs.dartmouth.edu/tse/letters/
+-----------------------------------------------
+
+==22610== 
+==22610== HEAP SUMMARY:
+==22610==     in use at exit: 797,442 bytes in 53,594 blocks
+==22610==   total heap usage: 62,275 allocs, 8,681 frees, 1,807,846 bytes allocated
+==22610== 
+==22610== 24 bytes in 3 blocks are definitely lost in loss record 1 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10AB3F: counters_new (counters.c:45)
+==22610==    by 0x109EE9: getScores (querier.c:370)
+==22610==    by 0x109745: querier (querier.c:150)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== 62,784 bytes in 7,848 blocks are indirectly lost in loss record 2 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10AB3F: counters_new (counters.c:45)
+==22610==    by 0x10A969: readIndexFromFile (index.c:85)
+==22610==    by 0x1095CE: querier (querier.c:114)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== 62,800 bytes in 1 blocks are indirectly lost in loss record 3 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10B149: hashtable_new (hashtable.c:54)
+==22610==    by 0x10A944: readIndexFromFile (index.c:77)
+==22610==    by 0x1095CE: querier (querier.c:114)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== 62,800 bytes in 7,850 blocks are indirectly lost in loss record 4 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10B77F: set_new (set.c:44)
+==22610==    by 0x10B188: hashtable_new (hashtable.c:62)
+==22610==    by 0x10A944: readIndexFromFile (index.c:77)
+==22610==    by 0x1095CE: querier (querier.c:114)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== 65,562 bytes in 7,850 blocks are indirectly lost in loss record 5 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10B8C6: setnode_new (set.c:110)
+==22610==    by 0x10B83B: set_insert (set.c:77)
+==22610==    by 0x10B28F: hashtable_insert (hashtable.c:89)
+==22610==    by 0x10A9D0: readIndexFromFile (index.c:97)
+==22610==    by 0x1095CE: querier (querier.c:114)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== 125,568 bytes in 7,848 blocks are indirectly lost in loss record 6 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10AC35: countersnode_new (counters.c:97)
+==22610==    by 0x10AB9E: counters_add (counters.c:66)
+==22610==    by 0x10A980: readIndexFromFile (index.c:92)
+==22610==    by 0x1095CE: querier (querier.c:114)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== 188,400 bytes in 7,850 blocks are indirectly lost in loss record 7 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10B89C: setnode_new (set.c:104)
+==22610==    by 0x10B83B: set_insert (set.c:77)
+==22610==    by 0x10B28F: hashtable_insert (hashtable.c:89)
+==22610==    by 0x10A9D0: readIndexFromFile (index.c:97)
+==22610==    by 0x1095CE: querier (querier.c:114)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== 229,488 bytes in 14,343 blocks are indirectly lost in loss record 8 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10AC35: countersnode_new (counters.c:97)
+==22610==    by 0x10AC0E: counters_add (counters.c:83)
+==22610==    by 0x10A980: readIndexFromFile (index.c:92)
+==22610==    by 0x1095CE: querier (querier.c:114)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== 797,418 (16 direct, 797,402 indirect) bytes in 1 blocks are definitely lost in loss record 9 of 9
+==22610==    at 0x4C31B0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==22610==    by 0x10B5EE: count_malloc (memory.c:53)
+==22610==    by 0x10B11A: hashtable_new (hashtable.c:47)
+==22610==    by 0x10A944: readIndexFromFile (index.c:77)
+==22610==    by 0x1095CE: querier (querier.c:114)
+==22610==    by 0x109587: main (querier.c:104)
+==22610== 
+==22610== LEAK SUMMARY:
+==22610==    definitely lost: 40 bytes in 4 blocks
+==22610==    indirectly lost: 797,402 bytes in 53,590 blocks
+==22610==      possibly lost: 0 bytes in 0 blocks
+==22610==    still reachable: 0 bytes in 0 blocks
+==22610==         suppressed: 0 bytes in 0 blocks
+==22610== 
+==22610== For counts of detected and suppressed errors, rerun with: -v
+==22610== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)

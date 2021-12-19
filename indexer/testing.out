@@ -1,0 +1,43 @@
+mkdir: cannot create directory ‘indexout’: File exists
+mkdir: cannot create directory ‘indexout/data0’: File exists
+mkdir: cannot create directory ‘indexout/data1’: File exists
+mkdir: cannot create directory ‘indexout/data2’: File exists
+mkdir: cannot create directory ‘indexout/data3’: File exists
+Too few arguments, should fail:
+Must enter 2 arguments: pageDirectory indexFilename
+
+Too many arguments, should fail:
+Must enter 2 arguments: pageDirectory indexFilename
+
+pageDirectory argument not a directory, should fail:
+Invalid argument: notadir/
+notadir/ is not readable or was not produced by crawler
+
+pageDirectory argument not produced by crawler, should fail:
+Invalid argument: ../common
+../common is not readable or was not produced by crawler
+
+pageDirectory argument not readable, should fail:
+Invalid argument: test
+test is not readable or was not produced by crawler
+
+indexer and indextest test with data0:
+sort and check for differences:
+Comparing indexout/data0/data0.sorted with indexout/data0/data0_test.sorted:
+No differences
+
+indexer and indextest test with data1:
+sort and check for differences:
+Comparing indexout/data1/data1.sorted with indexout/data1/data1_test.sorted:
+No differences
+
+indexer and indextest test with data2:
+sort and check for differences:
+Comparing indexout/data2/data2.sorted with indexout/data2/data2_test.sorted:
+No differences
+
+indexer and indextest test with data3:
+sort and check for differences:
+Comparing indexout/data3/data3.sorted with indexout/data3/data3_test.sorted:
+No differences
+
