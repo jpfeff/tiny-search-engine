@@ -2,8 +2,6 @@
 ## CS50 Winter 2021, Tiny Search Engine
 
 ## TSE Crawler Implementation Spec
-## CS50 Winter 2021
-Joshua Pfefferkorn
 
 ### Data Structures
 
