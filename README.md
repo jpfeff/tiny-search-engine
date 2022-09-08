@@ -1,5 +1,5 @@
 # Joshua Pfefferkorn
-## CS50 Winter 2021, Tiny Search Engine
+## Tiny Search Engine
 
 ## TSE Crawler Implementation Spec
 
